@@ -1,0 +1,2 @@
+max-line-length = 88  # Default is 79, adjust as needed
+exclude = .git,__pycache__,migrations,venv
