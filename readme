@@ -1,0 +1,100 @@
+Django-FAQ-API-Multilingual-Cached-Admin-Friendly
+Django FAQ API
+
+ 📌 Project Overview
+This project is a Django-based FAQ management system that supports multilingual translations, a WYSIWYG editor for rich-text formatting, caching for optimized performance, and an API for managing FAQs.
+
+ 🚀 Features
+- "WYSIWYG Editor Support" using django-ckeditor
+- "Multilingual FAQ Support" using googletrans
+- "Django REST Framework API" for managing FAQs
+- "Caching with Redis" to improve performance
+- "Admin Panel Integration" for easy management
+- "PEP8 Compliant" with linting via flake8
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+📥 Installation
+
+ 1️⃣ Prerequisites
+Ensure you have the following installed:
+- Python 3.8+
+- PostgreSQL or SQLite (default)
+- Redis (for caching)
+
+2️⃣ Clone the Repository
+//In terminal
+git clone https://github.com/yourusername/django-faq.git
+cd django-faq
+
+
+3️⃣ Install Dependencies
+//In terminal
+pip install -r requirements.txt
+
+
+4️⃣ Apply Migrations
+//In bash
+python manage.py makemigrations faq
+python manage.py migrate
+
+
+ 5️⃣ Run the Development Server
+//In terminal
+python manage.py runserver
+
+Visit http://127.0.0.1:8000/admin to manage FAQs.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🛠 API Usage
+
+📍 "Get All FAQs"
+GET /api/faqs/
+
+Response:
+[
+  {
+    "id": 1,
+    "question": "What is Django?",
+    "answer": "Django is a Python framework."
+  }
+]
+
+
+📍 "Get FAQ with Language Translation"
+
+GET /api/faqs/?lang=hi
+
+Response:
+json
+[
+  {
+    "id": 1,
+    "question": "Django क्या है?",
+    "answer": "Django एक Python फ्रेमवर्क है।"
+  }
+]
+
+📍 "Create a New FAQ"
+
+POST /api/faqs/
+Content-Type: application/json
+
+{
+  "question": "What is an API?",
+  "answer": "An API allows applications to communicate."
+}
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+💡 Contribution Guidelines
+We welcome contributions! To contribute:
+1. "Fork" the repository.
+2. Create a "feature branch": git checkout -b feature-name
+3. Commit your changes: git commit -m "feat: Added new feature"
+4. Push to the branch: git push origin feature-name
+5. Submit a "Pull Request"
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
